@@ -6,7 +6,7 @@ import {
   selectFilteredContacts,
   selectLoading,
 } from "../../redux/contacts/selectors";
-import ContactList from "../../components/contactList.jsx/ContactList";
+import ContactList from "../../components/СontactList.jsx/ContactList";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations";

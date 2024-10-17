@@ -4,11 +4,11 @@ import { fetchContacts } from "../redux/contacts/operations";
 import { selectContacts, selectIsLoading } from "../redux/contacts/selectors";
 
 import DocumentTitle from "../components/DocumentTitle";
-import ContactList from "../components/contactList/ContactList";
-import SearchBox from "../components/searchBox/SearchBox";
-import ContactForm from "../components/contactForm/ContactForm";
+import ContactList from "../components/ContactList/ContactList";
+import SearchBox from "../components/SearchBox/SearchBox";
+import ContactForm from "../components/ContactForm/ContactForm";
 import SectionLoader from "../components/Loader/Loader";
-import ErrorMessage from "../components/errorMessage/ErrorMessage";
+import ErrorMessage from "../components/ErrorMessage/ErrorMessage";
 
 const Contacts = () => {
   const dispatch = useDispatch();
