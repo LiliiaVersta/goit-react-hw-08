@@ -1,7 +1,7 @@
 import useSelector from "../../hookUseAuth/HookUseAuth";
-import Navigation from "../navigation/Navigation";
-import UserMenu from "../userMenu/UserMenu";
-import AuthNav from "../authNav/AuthNav";
+import Navigation from "../Navigation/Navigation";
+import UserMenu from "../UserMenu/UserMenu";
+import AuthNav from "../AuthNav/AuthNav";
 import css from "./AppBar.module.css";
 
 const AppBar = () => {
