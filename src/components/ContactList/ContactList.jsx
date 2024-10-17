@@ -1,28 +1,25 @@
 import { useSelector } from "react-redux";
-import Contact from "../Contact/Contact";
+import { selectFilteredContacts } from "../../redux/filters/selectors";
 import styles from "./ContactList.module.css";
-import {
-  selectError,
-  selectFilteredContacts,
-  selectLoading,
-} from "../../redux/contactsSlice";
-import Loader from "../Loader/Loader";
 
-const ContactList = () => {
-  const loading = useSelector(selectLoading);
-  const error = useSelector(selectError);
-  const contacts = useSelector(selectFilteredContacts);
+import Contact from "../Contact/Contact";
+
+function ContactList() {
+  const visibleContacts = useSelector(selectFilteredContacts);
+
   return (
-    <ul className={styles.contactList}>
-      {loading && <Loader />}
-      {!loading &&
-        contacts &&
-        !error &&
-        contacts.map(({ id, name, number }) => (
-          <Contact key={id} id={id} number={number} name={name} />
-        ))}
-      {error && <div>`Error: ${error} `</div>}
-    </ul>
+    <>
+      {visibleContacts.length > 0 ? (
+        <ul className={styles.ul}>
+          {visibleContacts.map((contact) => (
+            <Contact key={contact.id} {...contact} />
+          ))}
+        </ul>
+      ) : (
+        <p>Your phonebook is empty!</p>
+      )}
+    </>
   );
-};
+}
+
 export default ContactList;

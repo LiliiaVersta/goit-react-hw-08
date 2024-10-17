@@ -1,15 +1,18 @@
-.searchContainer {
-  margin-bottom: 40px;
+.searchBox {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: gold;
+  background-color: black;
 }
 
-.searchLabel {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.searchInput {
-  border-radius: 8px;
-  padding-inline: 12px;
-  padding-block: 8px;
-  min-width: 320px;
+.input {
+  margin: 15px;
+  height: 30px;
+  text-align: center;
 }
